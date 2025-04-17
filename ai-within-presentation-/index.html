@@ -1,6 +1,78 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The AI Within – Surreal Deck</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css"><link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme"></head><body><div class="reveal"><div class="slides">
-<section><h2>Slide 1: Introduction</h2><iframe src="slide1_mobius_intro.html" width="800" height="500" style="border:none;"></iframe></section>
-<section><h2>Slide 2: AI as Mirror</h2><iframe src="slide2_ai_mirror.html" width="800" height="500" style="border:none;"></iframe></section>
-<section><h2>Slide 3: AI as Mentor</h2><iframe src="slide3_data_tree.html" width="800" height="500" style="border:none;"></iframe></section>
-<section><h2>Slide 5: Risks of Outsourcing</h2><iframe src="slide5_puppet.html" width="800" height="500" style="border:none;"></iframe></section>
-</div></div><script src="https://unpkg.com/reveal.js/dist/reveal.js"></script><script>Reveal.initialize();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The AI Within – Surreal Journey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+  <style>
+    body { margin: 0; background-color: #000; }
+    audio { display: none; }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <section>
+      <h2>1. Liftoff – The Mobius Loop</h2>
+      <iframe src="slide1_mobius_intro.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+    <section>
+      <h2>2. Mirror Field – AI Reflects</h2>
+      <iframe src="slide2_ai_mirror.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+    <section>
+      <h2>3. Neural Forest – AI Mentors</h2>
+      <iframe src="slide3_data_tree.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+    <section>
+      <h2>4. Nudge Reactor – AI Motivates</h2>
+      <iframe src="slide4_motivator.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+    <section>
+      <h2>5. Puppet Paradox – Risks</h2>
+      <iframe src="slide5_puppet.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+    <section>
+      <h2>6. Arrival – Planet Next Level</h2>
+      <iframe src="slide6_next_level.html" width="800" height="500" style="border:none;"></iframe>
+    </section>
+
+  </div>
+</div>
+
+<!-- Ambient music loop -->
+<audio id="ambient" src="ambient_loop.mp3" autoplay loop></audio>
+
+<!-- Narration track -->
+<audio id="narration" src="narration.mp3" autoplay></audio>
+
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    autoSlide: 15000,
+    loop: true,
+    transition: 'fade',
+    backgroundTransition: 'convex'
+  });
+
+  // Sync narration restart on loop
+  Reveal.on('slidechanged', event => {
+    const narration = document.getElementById("narration");
+    if (event.indexh === 0) {
+      narration.currentTime = 0;
+      narration.play();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,1 +1,53 @@
-<html><body><script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js'></script><script>let angle=0;function setup(){createCanvas(600,400);noFill();stroke(70,130,180,180);strokeWeight(2);}function draw(){background(250);translate(width/2,height/2);rotate(angle);mobiusStrip(100,200,50);angle+=0.003;}function mobiusStrip(r1,r2,t){beginShape();for(let i=0;i<=TWO_PI*2;i+=0.1){let x=cos(i/2)*(r1+t*cos(i));let y=sin(i/2)*(r1+t*cos(i));vertex(x,y);}endShape();}</script></body></html>
+<html>
+<head>
+  <style>
+    .bg-container {
+      width: 600px;
+      height: 400px;
+      background-image: url('Screenshot 2025-04-17 234745.png');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.4) blur(4px);
+      position: relative;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-container">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script>
+      let angle = 0;
+      function setup() {
+        let c = createCanvas(600, 400);
+        c.parent(document.querySelector('.bg-container'));
+        noFill();
+        stroke(70, 130, 180, 180);
+        strokeWeight(2);
+      }
+      function draw() {
+        clear();
+        translate(width / 2, height / 2);
+        rotate(angle);
+        mobiusStrip(100, 200, 50);
+        angle += 0.003;
+      }
+      function mobiusStrip(r1, r2, t) {
+        beginShape();
+        for (let i = 0; i <= TWO_PI * 2; i += 0.1) {
+          let x = cos(i / 2) * (r1 + t * cos(i));
+          let y = sin(i / 2) * (r1 + t * cos(i));
+          vertex(x, y);
+        }
+        endShape();
+      }
+    </script>
+  </div>
+</body>
+</html>
+

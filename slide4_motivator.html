@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script>
+      let t = 0;
+
+      function setup() {
+        createCanvas(600, 400);
+        noStroke();
+      }
+
+      function draw() {
+        background(10, 10, 30);
+
+        // Pulsing central core
+        let pulse = 50 + sin(t) * 20;
+        fill(255, 100, 200, 180);
+        ellipse(width / 2, height / 2, pulse, pulse);
+
+        // Orbiting nudges
+        for (let i = 0; i < 6; i++) {
+          let angle = TWO_PI * i / 6 + t * 0.5;
+          let x = width / 2 + cos(angle) * 100;
+          let y = height / 2 + sin(angle) * 100;
+          fill(200, 255, 255, 180);
+          ellipse(x, y, 20, 20);
+        }
+
+        t += 0.03;
+      }
+    </script>
+  </body>
+</html>
