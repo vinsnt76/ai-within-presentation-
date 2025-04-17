@@ -1,0 +1,1 @@
+<html><body><script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js'></script><script>let t=0;function setup(){createCanvas(600,400);noStroke();}function draw(){background(30);fill(200,200,255,100);for(let i=0;i<width;i+=20){let offset=noise(i*0.01,t)*50;ellipse(i,height/2+offset,15,60);ellipse(width-i,height/2-offset,15,60);}t+=0.01;}</script></body></html>

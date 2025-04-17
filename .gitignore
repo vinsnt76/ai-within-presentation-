@@ -1,0 +1,7 @@
+
+# Ignore macOS and system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules if added
+node_modules/
